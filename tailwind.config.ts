@@ -21,7 +21,8 @@ const config: Config = {
         current: 'currentColor',
         blue: {
           main: '#009DDC',
-          light: '#EDFAFF'
+          light: '#EDFAFF',
+          verylight: '#FAFDFE'
         },
         yellow: {
           main: '#F9C200',
