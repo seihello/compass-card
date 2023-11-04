@@ -16,14 +16,22 @@ const config: Config = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        blue: '#009DDC',
-        lightblue: '#EDFAFF',
-        yellow: '#F9C200',
-        lightyellow: '#F9C20033',
-        pink: '#EB2A8C',
-        lightpink: '#ED2B7133',
-        green: '#66CF14',
-        lightgreen: '#66CF1433'
+        blue: {
+          main: '#009DDC',
+          light: '#EDFAFF'
+        },
+        yellow: {
+          main: '#F9C200',
+          light: '#F9C20033'
+        },
+        pink: {
+          main: '#EB2A8C',
+          light: '#ED2B7133',
+        },
+        green: {
+          main: '#66CF14',
+          light: '#66CF1433'
+        }
       },
     },
   },
