@@ -34,6 +34,11 @@ const config: Config = {
         green: {
           main: '#66CF14',
           light: '#66CF1433'
+        },
+        gray: {
+          1: '#6E6E7A',
+          2: '#E6E6E6',
+          3: '#F5F5F5'
         }
       },
     },
