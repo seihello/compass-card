@@ -4,13 +4,7 @@ import Link from 'next/link';
 import { BsCheckCircleFill, BsXCircleFill } from 'react-icons/bs'
 import { PurchaseContext, PurchaseResult } from '@/context/purchase-context';
 
-type Props = {
-  productType: string;
-  total: number;
-  expirationDate: Date;
-}
-
-export default function PurchaseComplete(props: Props) {
+export default function PurchaseComplete() {
 
   const { result, total, expirationDate } = useContext(PurchaseContext);
 
