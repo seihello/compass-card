@@ -2,15 +2,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { HeaderContext } from '@/context/header-context'
 import ServiceStatusSummary from '@/components/service-status/service-status-summary'
-
-
-export enum LineStatus {
-  OnSchedule,
-  Delay,
-  NotInService
-}
-
-export type StatusMap = { [key: string]: LineStatus };
+import { StatusMap, LineStatus } from '@/common/line-status'
 
 const busLineStatusList: StatusMap = {
   'R2': LineStatus.Delay,

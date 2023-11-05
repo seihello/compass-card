@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import { StatusMap, LineStatus } from '@/app/service-status/page'
+import { StatusMap, LineStatus } from '@/common/line-status'
 import StatusChip from './status-chip'
 
 type Props = {

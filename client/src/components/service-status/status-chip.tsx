@@ -1,7 +1,7 @@
 import React, { useEffect, useState, cloneElement } from 'react'
 import { IoAlertCircle } from 'react-icons/io5'
 import { BsXCircleFill } from 'react-icons/bs';
-import { LineStatus } from '@/app/service-status/page';
+import { StatusMap, LineStatus } from '@/common/line-status'
 
 type Props = {
   title: string;
