@@ -32,7 +32,7 @@ export default function CheckoutBar(props: Props) {
       return accumulator + props.passOptions[index].price * currentValue;
     }, 0)
     setTotal(sum);
-  }, [props.counters, props.passOptions])
+  }, [props.counters, props.passOptions, setTotal])
 
   return (
     <div
