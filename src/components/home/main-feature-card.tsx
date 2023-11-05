@@ -24,7 +24,7 @@ export default function MainFeatureCard(props: Props) {
       `}
     >
       {props.hasNotification &&
-        <span className='indicator-item badge right-1 top-1 bg-pink-main ' />
+        <span className='indicator-item badge w-6 h-6 right-1 top-1 rounded-full bg-pink-main border-2 border-white' />
       }
       {cloneElement(props.icon, { className: 'text-white' })}
       <p className='w-36 text-sm text-white text-center font-bold'>
