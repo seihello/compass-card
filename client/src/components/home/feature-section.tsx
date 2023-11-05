@@ -13,14 +13,14 @@ export default function FeatureSection() {
         <MainFeatureCard link='/stored-value' title='Stored Value' icon={<FiDollarSign />} hasNotification={false} isEnabled={false} />
       </div>
       <div className='w-full flex justify-stretch gap-x-4'>
-        <SubFeatureCard title='Service Status' icon={<FiInfo />} isEnabled={false} />
-        <SubFeatureCard title='Lost / Stolen' icon={<FiCreditCard />} isEnabled={false} />
-        <SubFeatureCard title='Eco Reward' icon={<FiGift />} isEnabled={false} />
+        <SubFeatureCard link='/service-status' title='Service Status' icon={<FiInfo />} isEnabled={true} />
+        <SubFeatureCard link='' title='Lost / Stolen' icon={<FiCreditCard />} isEnabled={false} />
+        <SubFeatureCard link='' title='Eco Reward' icon={<FiGift />} isEnabled={false} />
       </div>
       <div className='w-full flex justify-stretch gap-x-4'>
-        <SubFeatureCard title='Transit History' icon={<PiClockCounterClockwiseBold />} isEnabled={false} />
-        <SubFeatureCard title='Contact' icon={<PiChatCircleBold />} isEnabled={false} />
-        <SubFeatureCard title='My Page' icon={<FiUser />} isEnabled={false} />
+        <SubFeatureCard link='' title='Transit History' icon={<PiClockCounterClockwiseBold />} isEnabled={false} />
+        <SubFeatureCard link='' title='Contact' icon={<PiChatCircleBold />} isEnabled={false} />
+        <SubFeatureCard link='' title='My Page' icon={<FiUser />} isEnabled={false} />
       </div>
     </>
   )
