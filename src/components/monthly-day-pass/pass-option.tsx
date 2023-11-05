@@ -22,12 +22,12 @@ export default function PassOptionBox(props: Props) {
       </div>
       <div className='flex justify-between items-center gap-x-4'>
         <FaCircleMinus
-          className='text-2xl text-gray-2'
+          className='text-2xl text-gray-2 cursor-pointer'
           onClick={() => props.setCounter(props.index, props.count - 1)}
         />
         <p className='w-4 text-center'>{props.count}</p>
         <FaCirclePlus
-          className='text-2xl text-blue-main'
+          className='text-2xl text-blue-main cursor-pointer'
           onClick={() => props.setCounter(props.index, props.count + 1)}
         />
       </div>
