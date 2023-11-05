@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import PassOptionBox from '@/components/monthly-day-pass/pass-option'
 import CheckoutBar from '@/components/monthly-day-pass/checkout-bar'
+import { HeaderContext } from '@/context/header-context'
 
 export type PassOption = {
   title: string;
@@ -44,6 +45,12 @@ const passOptions = [
 ]
 
 export default function MonthlyDayPass() {
+
+  const { setTitle } = useContext(HeaderContext);
+
+  useEffect(() => {
+    setTitle('Montyly / Day Pass');
+  }, [])
 
   const [counters, setCounters] = useState<number[]>(new Array(passOptions.length).fill(0));
 

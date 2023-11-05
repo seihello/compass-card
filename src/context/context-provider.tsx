@@ -1,10 +1,13 @@
 'use client'
 import { PurchaseContextProvider } from "./purchase-context";
+import { HeaderContextProvider } from "./header-context";
 
 export function ContextProvider({ children }: { children: React.ReactNode }) {
   return (
-    <PurchaseContextProvider>
-      {children}
-    </PurchaseContextProvider>
+    <HeaderContextProvider>
+      <PurchaseContextProvider>
+        {children}
+      </PurchaseContextProvider>
+    </HeaderContextProvider>
   )
 }
