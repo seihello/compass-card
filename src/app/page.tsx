@@ -7,7 +7,7 @@ import SubFeatureCard from '@/components/home/sub-feature-card'
 
 export default function Home() {
   return (
-    <div className='flex flex-col items-center gap-y-4'>
+    <>
       <h1 className='w-full text-left text-blue-main font-bold'>Hi, John!</h1>
       <BasicInfoCard />
       <RegularPassCard />
@@ -25,6 +25,6 @@ export default function Home() {
         <SubFeatureCard title='Contact' icon={PiChatCircleBold}  />
         <SubFeatureCard title='My Page' icon={FiUser}  />
       </div>
-    </div>
+    </>
   )
 }
