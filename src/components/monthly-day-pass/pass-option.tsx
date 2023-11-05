@@ -1,15 +1,18 @@
 'use client'
 import React, { useState } from 'react'
 import { FaCircleMinus, FaCirclePlus } from 'react-icons/fa6'
+import { PassOption } from '@/app/monthly-day-pass/page'
+import { count } from 'console'
 
 type Props = {
+  index: number;
   title: string;
   price: number;
+  count: number;
+  setCounter: (index: number, value: number) => void;
 }
 
-export default function PassOption(props: Props) {
-
-  const [count, setCount] = useState(0);
+export default function PassOptionBox(props: Props) {
 
   return (
     <div className='w-full flex justify-between gap-x-8 items-center'>
@@ -20,14 +23,12 @@ export default function PassOption(props: Props) {
       <div className='flex justify-between items-center gap-x-4'>
         <FaCircleMinus
           className='text-2xl text-gray-2'
-          onClick={() => {
-            if (count - 1 >= 0) setCount(count - 1)
-          }}
+          onClick={() => props.setCounter(props.index, props.count - 1)}
         />
-        <p className='w-4 text-center'>{count}</p>
+        <p className='w-4 text-center'>{props.count}</p>
         <FaCirclePlus
           className='text-2xl text-blue-main'
-          onClick={() => setCount(count + 1)}
+          onClick={() => props.setCounter(props.index, props.count + 1)}
         />
       </div>
     </div>
