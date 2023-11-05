@@ -12,8 +12,8 @@ export default function Home() {
       <BasicInfoCard />
       <RegularPassCard />
       <div className='w-full flex justify-stretch gap-x-4'>
-        <MainFeatureCard title='Monthly / Day Pass' icon={FiCalendar} />
-        <MainFeatureCard title='Stored Value' icon={FiDollarSign}  />
+        <MainFeatureCard title='Monthly / Day Pass' icon={FiCalendar} hasNotification={true} />
+        <MainFeatureCard title='Stored Value' icon={FiDollarSign} hasNotification={false} />
       </div>
       <div className='w-full flex justify-stretch gap-x-4'>
         <SubFeatureCard title='Service Status' icon={FiInfo} />
