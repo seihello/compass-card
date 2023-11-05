@@ -7,6 +7,7 @@ type Props = {
   title: string;
   icon: JSX.Element;
   hasNotification: boolean;
+  isEnabled: boolean;
 }
 
 export default function MainFeatureCard(props: Props) {
@@ -16,12 +17,16 @@ export default function MainFeatureCard(props: Props) {
   return (
     <div
       onClick={() => router.push(props.link)}
-      className='indicator flex flex-col justify-center items-center gap-y-1 grow py-5 bg-blue-main rounded-md text-4xl cursor-pointer'
+      className={`
+        indicator flex flex-col justify-center items-center gap-y-1 grow py-5
+        bg-blue-main rounded-md text-4xl cursor-pointer
+        ${!props.isEnabled && 'opacity-50'}
+      `}
     >
       {props.hasNotification &&
         <span className='indicator-item badge right-1 top-1 bg-pink-main ' />
       }
-      {cloneElement(props.icon, {className: 'text-white' })}
+      {cloneElement(props.icon, { className: 'text-white' })}
       <p className='w-36 text-sm text-white text-center font-bold'>
         {props.title}
       </p>
