@@ -30,7 +30,7 @@ export default function ServiceStatus() {
   }, [])
 
   return (
-    <div className='flex flex-col gap-y-6'>
+    <div className='w-full flex flex-col gap-y-6'>
       <h4 className='text-gray-0 font-bold w-full'>Service Status</h4>
       <p>The lines below is being delay or not in service.</p>
 

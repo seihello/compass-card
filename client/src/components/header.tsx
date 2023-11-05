@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <div
-      className='container w-full h-14 mb-1 flex justify-center items-center bg-white'
+      className='container w-full max-w-none h-14 mb-1 flex justify-center items-center bg-white'
       style={{
         boxShadow: title && '0px 0px 10px 0px #0000000A'
       }}

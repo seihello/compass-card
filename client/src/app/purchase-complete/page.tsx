@@ -9,8 +9,8 @@ export default function PurchaseComplete() {
   const { result, total, expirationDate } = useContext(PurchaseContext);
 
   return (
-    <div className='py-24 flex flex-col justify-center items-center gap-y-10'>
-      <div className='flex flex-col justify-center items-center gap-y-6'>
+    <div className='w-full py-24 flex flex-col justify-center items-center gap-y-10'>
+      <div className='w-full flex flex-col justify-center items-center gap-y-6'>
         <h4 className='max-w-[90%] font-bold text-center text-gray-0'>
           {result === PurchaseResult.Successful
             ? 'You have purchased montly pass!'
