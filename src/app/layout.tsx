@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header'
+import { ContextProvider } from '@/context/context-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,10 +24,12 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className={inter.className}>
-        <Header />
-        <main className="bg-white max-w-[768px] mx-auto font-sg flex min-h-screen flex-col gap-y-4 items-center px-5 py-3">
-          {children}
-        </main>
+        <ContextProvider>
+          <Header />
+          <main className="bg-white max-w-[768px] mx-auto font-sg flex min-h-screen flex-col gap-y-4 items-center px-5 py-3">
+            {children}
+          </main>
+        </ContextProvider>
       </body>
     </html>
   )

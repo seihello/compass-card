@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import PassOptionBox from '@/components/monthly-day-pass/pass-option'
 import CheckoutBar from '@/components/monthly-day-pass/checkout-bar'
 

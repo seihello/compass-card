@@ -1,5 +1,7 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
+import { useRouter } from 'next/navigation'
+import { PurchaseContext, PurchaseResult } from '@/context/purchase-context'
 
 type PassOption = {
   title: string;
@@ -13,7 +15,17 @@ type Props = {
 
 export default function CheckoutBar(props: Props) {
 
-  const [total, setTotal] = useState(0);
+  const router = useRouter();
+  
+  const { total, setTotal, setResult, setExpirationDate } = useContext(PurchaseContext);
+
+  const handlePurchase = () => {
+    setResult(PurchaseResult.Successful);
+    const today = new Date();
+    today.setMonth(today.getMonth() + 1)
+    setExpirationDate(today);
+    router.push('/purchase-complete');
+  }
 
   useEffect(() => {
     const sum = props.counters.reduce((accumulator, currentValue, index) => {
@@ -21,7 +33,6 @@ export default function CheckoutBar(props: Props) {
     }, 0)
     setTotal(sum);
   }, [props.counters, props.passOptions])
-
 
   return (
     <div
@@ -34,7 +45,7 @@ export default function CheckoutBar(props: Props) {
         <p className='text-gray-1'>Total</p>
         <p className='text-lg text-gray-0 font-bold'>$ {total.toFixed(2)}</p>
       </div>
-      <button className={`w-full h-12 ${total > 0 ? 'bg-blue-main' : 'bg-gray-2'} rounded-xl text-white`}>
+      <button onClick={handlePurchase} className={`w-full h-12 ${total > 0 ? 'bg-blue-main' : 'bg-gray-2'} rounded-xl text-white`}>
         Checkout
       </button>
     </div>
