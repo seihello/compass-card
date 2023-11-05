@@ -12,10 +12,10 @@ export default function PassOption(props: Props) {
   const [count, setCount] = useState(0);
 
   return (
-    <div className='w-full flex justify-between items-center'>
+    <div className='w-full flex justify-between gap-x-8 items-center'>
       <div className='flex flex-col text-gray-0'>
-        <p className='font-bold'>{props.title}</p>
-        <p>${props.price}</p>
+        <p className='font-bold leading-4'>{props.title}</p>
+        <p>${props.price.toFixed(2)}</p>
       </div>
       <div className='flex justify-between items-center gap-x-4'>
         <FaCircleMinus
