@@ -1,5 +1,6 @@
 import React from 'react'
 import PassOption from '@/components/monthly-day-pass/pass-option'
+import CheckoutBar from '@/components/monthly-day-pass/checkout-bar'
 
 export default function MonthlyDayPass() {
   return (
@@ -13,6 +14,7 @@ export default function MonthlyDayPass() {
       <h4 className='text-gray-0 font-bold w-full'>Day Pass</h4>
       <PassOption title='1 Time Payment All Day Long Riding' price={10.75} />
       <hr className='w-full bg-gray-2' />
+      <CheckoutBar total={10}/>
     </>
   )
 }
