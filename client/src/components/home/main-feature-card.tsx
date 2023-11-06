@@ -16,7 +16,7 @@ export default function MainFeatureCard(props: Props) {
 
   return (
     <div
-      onClick={() => router.push(props.link)}
+      onClick={props.isEnabled ? () => router.push(props.link) : () => {}}
       className={`
         indicator flex flex-col justify-center items-center gap-y-1 grow py-5
         bg-blue-main rounded-md text-4xl cursor-pointer

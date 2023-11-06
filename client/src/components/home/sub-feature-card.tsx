@@ -15,7 +15,7 @@ export default function SubFeatureCard(props: Props) {
 
   return (
     <div
-      onClick={() => router.push(props.link)}
+      onClick={props.isEnabled ? () => router.push(props.link) : () => {}}
       className={`
       flex flex-col justify-center items-center gap-y-1 grow py-3 
       bg-blue-light rounded-md text-4xl cursor-pointer

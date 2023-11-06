@@ -10,7 +10,7 @@ export default function FeatureSection() {
     <>
       <div className='w-full flex justify-stretch gap-x-4'>
         <MainFeatureCard link='/monthly-day-pass' title='Monthly / Day Pass' icon={<FiCalendar />} hasNotification={true} isEnabled={true} />
-        <MainFeatureCard link='/stored-value' title='Stored Value' icon={<FiDollarSign />} hasNotification={false} isEnabled={false} />
+        <MainFeatureCard link='' title='Stored Value' icon={<FiDollarSign />} hasNotification={false} isEnabled={false} />
       </div>
       <div className='w-full flex justify-stretch gap-x-4'>
         <SubFeatureCard link='/service-status' title='Service Status' icon={<FiInfo />} isEnabled={true} />
