@@ -16,7 +16,7 @@ type Props = {
 export default function CheckoutBar(props: Props) {
 
   const router = useRouter();
-  
+
   const { total, setTotal, setResult, setExpirationDate } = useContext(PurchaseContext);
 
   const handlePurchase = () => {
@@ -45,7 +45,10 @@ export default function CheckoutBar(props: Props) {
         <p className='text-gray-1'>Total</p>
         <p className='text-lg text-gray-0 font-bold'>$ {total.toFixed(2)}</p>
       </div>
-      <button onClick={handlePurchase} className={`w-full h-12 ${total > 0 ? 'bg-blue-main' : 'bg-gray-2'} rounded-xl text-white`}>
+      <button
+        onClick={handlePurchase}
+        className={`w-full h-12 ${total > 0 ? 'bg-blue-main active:bg-blue-active' : 'bg-gray-2'}  rounded-xl text-white`}
+      >
         Checkout
       </button>
     </div>

@@ -19,7 +19,7 @@ export default function MainFeatureCard(props: Props) {
       onClick={props.isEnabled ? () => router.push(props.link) : () => {}}
       className={`
         indicator flex flex-col justify-center items-center gap-y-1 grow py-5
-        bg-blue-main rounded-md text-4xl cursor-pointer
+        bg-blue-main active:bg-blue-active rounded-md text-4xl cursor-pointer
         ${!props.isEnabled && 'opacity-50'}
       `}
     >

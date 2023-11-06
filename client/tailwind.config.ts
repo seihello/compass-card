@@ -22,7 +22,11 @@ const config: Config = {
         blue: {
           main: '#009DDC',
           light: '#EDFAFF',
-          verylight: '#FAFDFE'
+          active: '#008EC7'
+        },
+        sky: {
+          main: '#FAFDFE',
+          active: '#DDF4FF'
         },
         yellow: {
           main: '#F9C200',
