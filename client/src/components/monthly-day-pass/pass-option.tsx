@@ -1,8 +1,7 @@
 'use client'
 import React, { useState } from 'react'
-import { FaCircleMinus, FaCirclePlus } from 'react-icons/fa6'
-import { PassOption } from '@/app/monthly-day-pass/page'
-import { count } from 'console'
+import { HiPlus, HiMinus } from 'react-icons/hi'
+import CountButton from '@/common/count-button'
 
 type Props = {
   index: number;
@@ -20,14 +19,16 @@ export default function PassOptionBox(props: Props) {
         <p className='font-bold leading-4'>{props.title}</p>
         <p>${props.price.toFixed(2)}</p>
       </div>
-      <div className='flex justify-between items-center gap-x-4'>
-        <FaCircleMinus
-          className='text-2xl text-gray-2 cursor-pointer'
+      <div className='flex justify-between items-center gap-x-2'>
+        <CountButton
+          icon={<HiMinus />}
+          isEnable={props.count > 0}
           onClick={() => props.setCounter(props.index, props.count - 1)}
         />
         <p className='w-4 text-center'>{props.count}</p>
-        <FaCirclePlus
-          className='text-2xl text-blue-main cursor-pointer'
+        <CountButton
+          icon={<HiPlus />}
+          isEnable={true}
           onClick={() => props.setCounter(props.index, props.count + 1)}
         />
       </div>
