@@ -20,11 +20,13 @@ export default function CheckoutBar(props: Props) {
   const { total, setTotal, setResult, setExpirationDate } = useContext(PurchaseContext);
 
   const handlePurchase = () => {
-    setResult(PurchaseResult.Successful);
-    const today = new Date();
-    today.setMonth(today.getMonth() + 1)
-    setExpirationDate(today);
-    router.push('/purchase-complete');
+    if(total > 0) {
+      setResult(PurchaseResult.Successful);
+      const today = new Date();
+      today.setMonth(today.getMonth() + 1)
+      setExpirationDate(today);
+      router.push('/purchase-complete');
+    }
   }
 
   useEffect(() => {
