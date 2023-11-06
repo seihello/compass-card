@@ -8,7 +8,7 @@ type Props = {
 
 export default function CountButton(props: Props) {
   return (
-    <div onClick={props.onClick} className='p-2'>
+    <div onClick={props.onClick} className={`p-2 ${props.isEnable && 'cursor-pointer'}`}>
       <div
         className={`
           p-1.5 rounded-full
