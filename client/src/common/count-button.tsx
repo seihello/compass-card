@@ -12,7 +12,9 @@ export default function CountButton(props: Props) {
       <div
         className={`
           p-1.5 rounded-full
-          ${props.isEnable ? 'bg-blue-light text-blue-main' : 'bg-gray-3 text-[#BBBBBB]'}
+          ${props.isEnable
+            ? 'bg-blue-light text-blue-main active:bg-sky-active'
+            : 'bg-gray-3 text-[#BBBBBB]'}
         `}
       >
         {cloneElement(props.icon, { className: 'text-sm' })}
