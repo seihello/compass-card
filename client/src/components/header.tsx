@@ -30,11 +30,10 @@ export default function Header() {
     //   boxShadow: title && '0px 0px 10px 0px #0000000A'
     // }}
     >
-      <h6 className='text-gray-0 text-center font-bold'>{title}</h6>
+      <h6 className='text-gray-0 dark:text-gray-3 text-center font-bold'>{title}</h6>
       <button
         className='absolute top-1/2 right-0 transform -translate-x-full -translate-y-1/2 dark:text-gray-3'>
       </button>
-
 
       {cloneElement(theme === 'light' ? <TbMoonStars /> : <TbSun className=''/>,
         {
