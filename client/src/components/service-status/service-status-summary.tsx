@@ -13,7 +13,7 @@ export default function ServiceStatusSummary(props: Props) {
 
   return (
     <div className='flex flex-col gap-6'>
-      <h5 className='text-gray-0 font-bold w-full'>{props.transport}</h5>
+      <h5 className='text-gray-0 dark:text-gray-3 font-bold w-full'>{props.transport}</h5>
       <div className='flex gap-x-1'>
         {Object.keys(props.lineStatusList).map((key: string, index: number) => (
           <StatusChip key={index} title={key} status={props.lineStatusList[key]} />

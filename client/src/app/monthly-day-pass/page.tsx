@@ -64,7 +64,7 @@ export default function MonthlyDayPass() {
 
   return (
     <>
-      <h4 className='text-gray-0 font-bold w-full'>Monthly Pass</h4>
+      <h4 className='text-gray-0 dark:text-gray-3 font-bold w-full'>Monthly Pass</h4>
       {passOptions.map((passOption, index) => passOption.type === PassType.Monthly && (
         <PassOptionBox
           key={index}
@@ -75,7 +75,7 @@ export default function MonthlyDayPass() {
           setCounter={setCounter} />
       ))}
       <hr className='w-full bg-gray-2' />
-      <h4 className='text-gray-0 font-bold w-full'>Day Pass</h4>
+      <h4 className='text-gray-0 dark:text-gray-3 font-bold w-full'>Day Pass</h4>
       {passOptions.map((passOption, index) => passOption.type === PassType.Day && (
         <PassOptionBox
           key={index}

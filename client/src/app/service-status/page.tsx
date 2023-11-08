@@ -31,8 +31,8 @@ export default function ServiceStatus() {
 
   return (
     <div className='w-full flex flex-col gap-y-6'>
-      <h4 className='text-gray-0 font-bold w-full'>Service Status</h4>
-      <p>The lines below is being delay or not in service.</p>
+      <h4 className='text-gray-0 dark:text-gray-3 font-bold w-full'>Service Status</h4>
+      <p className='dark:text-gray-3'>The lines below is being delay or not in service.</p>
 
       <ServiceStatusSummary transport='Bus' lineStatusList={busLineStatusList} />
       <hr className='w-full bg-gray-2' />
