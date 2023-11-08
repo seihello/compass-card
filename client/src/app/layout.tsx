@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header'
 import { ContextProvider } from '@/context/context-provider'
+import { ThemeProvider } from './theme-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,19 +18,21 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang='en' suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap' rel='stylesheet' />
       </head>
-      <body className={`${inter.className} bg-white`}>
-        <ContextProvider>
-          <Header />
-          <main className="bg-white max-w-[768px] mx-auto font-sg flex min-h-screen flex-col gap-y-4 items-center px-5 py-3">
-            {children}
-          </main>
-        </ContextProvider>
+      <body className={`${inter.className} bg-white`} >
+        <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+          <ContextProvider>
+            <Header />
+            <main className='bg-white max-w-[768px] mx-auto font-sg flex min-h-screen flex-col gap-y-4 items-center px-5 py-3'>
+              {children}
+            </main>
+          </ContextProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
