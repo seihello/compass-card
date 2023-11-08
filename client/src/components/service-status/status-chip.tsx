@@ -33,7 +33,7 @@ export default function StatusChip(props: Props) {
   return (
     <div className={`flex justify-center items-center gap-x-1 px-1.5 py-0.5 rounded-lg ${backgroundColor}`}>
       {icon && cloneElement(icon)}
-      <p className='text-sm text-gray-0'>{props.title}</p>
+      <p className='text-sm text-gray-0 dark:text-gray-3'>{props.title}</p>
     </div>
   )
 }

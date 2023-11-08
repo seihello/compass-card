@@ -21,7 +21,7 @@ export default function PurchaseComplete() {
           : <BsXCircleFill className='text-6xl text-pink-main' />}
 
         {result === PurchaseResult.Successful &&
-          <div className='flex flex-col justify-center items-center text-gray-1'>
+          <div className='flex flex-col justify-center items-center text-gray-1 dark:text-gray-3'>
             {/* <p>Zone 1</p> */}
             <p>$ {total.toFixed(2)}</p>
             <p>Valid until <span className='font-bold'>{

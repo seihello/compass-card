@@ -24,11 +24,11 @@ export default function RootLayout({
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap' rel='stylesheet' />
       </head>
-      <body className={`${inter.className} bg-white`} >
+      <body className={`${inter.className} bg-white dark:bg-gray-0`} >
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <ContextProvider>
             <Header />
-            <main className='bg-white max-w-[768px] mx-auto font-sg flex min-h-screen flex-col gap-y-4 items-center px-5 py-3'>
+            <main className='bg-white dark:bg-gray-0 max-w-[768px] mx-auto font-sg flex min-h-screen flex-col gap-y-4 items-center px-5 py-3'>
               {children}
             </main>
           </ContextProvider>
