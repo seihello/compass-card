@@ -49,7 +49,7 @@ export default function MonthlyDayPass() {
   const { setTitle } = useContext(HeaderContext);
 
   useEffect(() => {
-    setTitle('Montyly / Day Pass');
+    setTitle('Monthly / Day Pass');
   }, [])
 
   const [counters, setCounters] = useState<number[]>(new Array(passOptions.length).fill(0));
