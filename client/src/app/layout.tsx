@@ -22,6 +22,7 @@ export default function RootLayout({
       <head>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap' rel='stylesheet' />
       </head>
       <body className={`${inter.className} bg-white dark:bg-gray-0`} >
