@@ -11,7 +11,7 @@ export default function PurchaseComplete() {
   return (
     <div className='w-full py-24 flex flex-col justify-center items-center gap-y-10'>
       <div className='w-full flex flex-col justify-center items-center gap-y-6'>
-        <h4 className='max-w-[90%] font-bold text-center text-gray-0'>
+        <h4 className='max-w-[90%] font-bold text-center text-gray-0 dark:text-gray-3'>
           {result === PurchaseResult.Successful
             ? 'You have purchased montly pass!'
             : 'Failed to purchase monthly pass'}
