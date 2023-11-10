@@ -14,7 +14,7 @@ export default function CountButton(props: Props) {
           p-1.5 rounded-full
           ${props.isEnable
             ? 'bg-blue-light text-blue-main active:bg-sky-active'
-            : 'bg-gray-3 text-[#BBBBBB]'}
+            : 'bg-gray-3 text-[#999999]'}
         `}
       >
         {cloneElement(props.icon, { className: 'text-sm' })}
