@@ -20,12 +20,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header
-      className='container w-full max-w-none h-14 mb-1 flex justify-center items-center bg-white dark:bg-gray-0'
-    // style={{
-    //   boxShadow: title && '0px 0px 10px 0px #0000000A'
-    // }}
-    >
+    <header className='container w-full max-w-none h-14 mb-1 flex justify-center items-center bg-white dark:bg-gray-0'>
       <div className='relative w-full max-w-[768px] h-full flex justify-center items-center'>
         <h6 className='text-gray-0 dark:text-gray-3 text-center font-bold'>{title}</h6>
         <button
@@ -36,7 +31,7 @@ export default function Header() {
           {
             onClick: () => setTheme(theme === 'dark' ? 'light' : 'dark'),
             style: { fontSize: '1.5rem' },
-            className: `absolute top-1/2 right-0 transform -translate-x-full -translate-y-1/2 ${theme === 'dark' && 'text-gray-3'}`
+            className: `absolute top-1/2 right-0 transform -translate-x-full -translate-y-1/2 ${theme === 'dark' && 'text-gray-3'} cursor-pointer`
           })}
       </div>
 
