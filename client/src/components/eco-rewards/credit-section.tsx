@@ -59,7 +59,7 @@ export default function CreditSection() {
 
 
         {selectedIndex !== creditItems.length - 1 &&
-          <div className='w-8 h-8 rounded-full border-white box-content absolute top-1/2 translate-y-[-50%] right-0 translate-x-[-100%] bg-white'>
+          <div className='w-8 h-8 rounded-full border-white box-content absolute top-1/2 translate-y-[-50%] right-0  bg-white'>
             <IoIosArrowForward
               onClick={forward}
               className='absolute top-1/2 translate-y-[-50%] left-1/2 translate-x-[-50%] text-xl text-gray-1'
