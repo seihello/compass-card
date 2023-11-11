@@ -29,7 +29,7 @@ export default function RootLayout({
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <ContextProvider>
             <Header />
-            <main className='bg-white dark:bg-gray-0 max-w-[768px] mx-auto font-sg flex min-h-screen flex-col gap-y-4 items-center px-5 py-3'>
+            <main className='bg-white dark:bg-gray-0 max-w-[768px] mx-auto font-sg flex min-h-screen flex-col gap-y-4 items-center px-5 py-3 overflow-hidden'>
               {children}
             </main>
           </ContextProvider>
