@@ -36,7 +36,7 @@ export default function CreditSection() {
 
   return (
     <>
-      <h4 className='font-bold text-left'>Your Credit</h4>
+      <h4 className='font-bold text-left dark:text-gray-3'>Your Credit</h4>
       <div className='relative h-32 flex justify-between gap-x-4'>
         {creditItems.map((creditItem, index) =>
           <CreditItem
