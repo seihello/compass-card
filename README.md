@@ -1,6 +1,6 @@
 # Compass Card Manager
 An application that allows you to control your Compass Card.  
-*Compass Card is an fare card issued by TransLink for using everyware on transit in Metro Vancouver.
+*Compass Card is an fare card issued by TransLink for using everywhere on transit in Metro Vancouver.
 
 ![Showcase](/client/public/showcase.png)
 
